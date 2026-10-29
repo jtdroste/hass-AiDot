@@ -1,0 +1,4 @@
+homeassistant==2026.10.4
+python-aidot==0.3.58
+pytest==9.2.0
+pytest-asyncio==1.4.1

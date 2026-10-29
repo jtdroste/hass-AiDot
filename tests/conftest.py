@@ -9,5 +9,7 @@ pull in Home Assistant.
 import sys
 from pathlib import Path
 
-_AIDOT_DIR = Path(__file__).resolve().parent.parent / "custom_components" / "aidot"
+_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(_ROOT))
+_AIDOT_DIR = _ROOT / "custom_components" / "aidot"
 sys.path.insert(0, str(_AIDOT_DIR))

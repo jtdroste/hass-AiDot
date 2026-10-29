@@ -58,6 +58,8 @@ class BleDeviceInfo:
     enable_cct: bool
     cct_min: int = 2700
     cct_max: int = 6500
+    # Cloud presets are only supported by the Wi-Fi client.
+    preset_names: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -67,6 +69,7 @@ class BleDeviceStatus:
     dimming: int = 255
     cct: int = 2700
     rgbw: tuple[int, int, int, int] = field(default_factory=lambda: (255, 255, 255, 0))
+    effect: str = ""
 
 
 _seq = 0
